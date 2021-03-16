@@ -2,7 +2,8 @@
 @import "../mixins.scss";
 .cardLink {
   min-width: 12rem;
-  max-width: 30%;
+  width: 25%;
+  max-width: 20rem;
   height: 20rem;
   background-color: $card-bg-color;
   color: $cards-font-color;
