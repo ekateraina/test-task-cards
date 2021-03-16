@@ -1,0 +1,28 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.cardsHolder {
+  @include centered-elements;
+  flex-direction: column;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0;
+  gap: 1rem;
+
+  button {
+    width: 9.375rem;
+    height: 3.125rem;
+    border: 1px solid $border-color;
+    border-radius: 25px;
+    background-color: $btn-color;
+    cursor: pointer;
+  }
+
+  .cardsWrapper {
+    @include centered-elements;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+}

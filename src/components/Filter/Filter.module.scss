@@ -1,0 +1,16 @@
+@import '../variables.scss';
+
+.filter{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 10%;
+
+    input{
+        width: 26.125rem;
+        height: 3.125rem;
+        border: 1px solid $border-color;
+        border-radius: 25px;
+        outline: none;
+    }
+}

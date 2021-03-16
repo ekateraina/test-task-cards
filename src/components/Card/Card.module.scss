@@ -1,0 +1,83 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+.cardLink {
+  min-width: 12rem;
+  max-width: 30%;
+  height: 20rem;
+  background-color: $card-bg-color;
+  color: $cards-font-color;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    gap: 2%;
+
+    .imgWrapper {
+      @include centered-elements;
+      width: 100%;
+      height: 58%;
+    }
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1rem;
+      height: 40%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    circle {
+      fill: none;
+      stroke-width: 10;
+    }
+    .circle {
+      stroke: lightblue;
+      stroke-dasharray: 5;
+      animation: move-blue 3.5s ease-in infinite;
+    }
+  }
+}
+
+@keyframes move-blue {
+  0% {
+    stroke-dashoffset: 360;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1000px) {
+  .card {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 850px) {
+  .cardLink {
+    max-width: 40%;
+
+    .card {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cardLink {
+    max-width: 60%;
+
+    .card {
+      font-size: 0.7rem;
+    }
+  }
+}
